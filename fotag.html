@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fotag!</title>
+
+    <!--
+    All of your CSS must go in css/fotag.css. Do not add styles to individual elements.
+    All of your CSS must be your own -- you may not use third-party CSS, like Bootstrap.
+    -->
+    <link rel="stylesheet" href="css/fotag.css"/>
+    <style>
+        .marking-button {
+            float:right;
+        }
+        .marking-div-clear {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+<!-- This header can be replaced
+<h1>Fotag!</h1>
+Import, organize, and rate your photos!
+-->
+<div id="app-container">
+    <div id="photo-container" class="grid"></div>
+</div>
+
+<template id="file-chooser">
+    <div class="file-input">
+        <span>Upload Image:</span>
+        <input type="file" class="files-input" name="file_results[]" width="200" height="200" multiple />
+        <output id="list"></output>
+    </div>
+</template>
+
+<template id="toolbar-template">
+    <div class="toolbar">
+        <span class="title">FOTAG</span>
+        <div id="grid_button" class="clicked">
+            <i class="fa fa-th icon"></i>
+        </div>
+        <div id="list_button">
+            <i class="fa fa-th-list icon"></i>
+        </div>
+        <div class="filter">
+            <span>Filter: </span>
+            <select id="rating_filter">
+                <option value="0">
+                    Show all
+                </option>
+                <option value="1">
+                    1+ stars
+                </option>
+                <option value="2">
+                    2+ stars
+                </option>
+                <option value="3">
+                    3+ stars
+                </option>
+                <option value="4">
+                    4+ stars
+                </option>
+                <option value="5">
+                    5+ stars
+                </option>
+            </select>
+        </div>
+    </div>
+</template>
+
+<template id="image-template">
+    <div class="img-module">
+        <div class="thumbnail">
+            <img class="uploaded-img" src=""/>
+        </div>
+        <div class="meta">
+            <div class="file-name"></div>
+            <div class="last-updated"></div>
+            <div class="stars"></div>
+        </div>
+    </div>
+</template>
+
+<template id="collection-template">
+</template>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/fotag.js"></script>
+</body>
+</html>

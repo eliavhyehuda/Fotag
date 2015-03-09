@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    background: #FDF3E7;
+    /*background: linear-gradient(to right, #EDEBE6 , #D6E1C7);*/
+}
+
+/* FONT AWESOME */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.fa-th-list:before {
+    content: "\f00b";
+}
+
+.fa-th:before {
+    content: "\f00a";
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+.fa-star-o:before {
+    content: "\f006";
+}
+/*END FONT AWESOME*/
+
+
+/*GRID AND LIST BUTTON*/
+#list_button, #grid_button {
+    left: 50px;
+    top: 5px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    font-size: 18pt;
+    margin-left: -4px;
+}
+
+.fa {
+    top: 3px;
+}
+
+.clicked {
+    color: rgba(0, 0, 0, 1) !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.icon {
+    position: relative;
+    left: 3px;
+}
+/*END OF GRID AND LIST BUTTON*/
+
+.toolbar {
+    z-index: 9;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 1);
+    /*background: linear-gradient(#403B33, #26231e);*/
+    height: 60px;
+    box-shadow: 0 2px 10px 2px black;
+}
+
+.filter {
+    color: white;
+    font-size: 15pt;
+    position: relative;
+    top: 22px;
+    float: right;
+}
+
+.title {
+    left: 20px;
+    position: relative;
+    top: 13px;
+    font-size: 30pt;
+    background: rgba(255, 255, 255, 1);
+    /*background: -webkit-linear-gradient(#e4a289, #d7734e);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#app-container {
+    padding-top: 100px;
+}
+
+#photo-container {
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+.img-module {
+    box-sizing: border-box;
+}
+
+.img-module .expand {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.meta {
+    width: 100%;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%;
+    overflow: hidden;
+}
+
+.thumbnail .expand{
+    overflow: auto !important;
+}
+
+
+.uploaded-img {
+    zoom: 0.8;
+    min-width: 100%;
+    min-height: 300px;
+}
+
+.uploaded-img .expand {
+    min-width: 90% !important;
+    height: 50%;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 18pt;
+}
+
+.stars {
+    width: 84px;
+    margin: auto;
+}
+
+.grid .thumbnail {
+    height: 300px;
+}
+
+.list .img-module {
+    width: 100%;
+}
+
+.list .uploaded-img {
+    width: 100%;
+    min-width: 100px;
+}
+
+.list .meta {
+    position: relative;
+}
+
+@media screen and (min-width: 760px) and (min-device-width: 760px) {
+    .img-module {
+        padding: 20px;
+        width: 33%;
+        float: left;
+    }
+
+    .list .thumbnail {
+        width: 30%;
+        float: left;
+    }
+
+    .list .meta {
+        padding-left: 50px;
+        box-sizing: border-box;
+        text-align: left;
+        top: 75px;
+        width: 70%;
+        float: left;
+    }
+
+    .list .stars {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .img-module {
+        padding: 7px;
+        width: 50%;
+        float: left;
+    }
+
+    .list .thumbnail {
+        width: 100%;
+    }
+
+    .list .meta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .img-module {
+        padding: 7px;
+        width: 100%;
+        float: left;
+    }
+
+    .list .thumbnail {
+        width: 100%;
+    }
+
+    .list .meta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.file-input {
+    position: relative;
+    width: 80%;
+    left: 20%;
+}
+.file-input span{
+    font-size: 20pt;
+}
